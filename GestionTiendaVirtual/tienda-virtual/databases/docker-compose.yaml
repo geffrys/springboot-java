@@ -1,0 +1,16 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  users-db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: users
+      MYSQL_ROOT_PASSWORD: admin
+    ports:
+      - "3309:3306"
+
